@@ -5,11 +5,11 @@ from fabric.api import local, task, quiet
 
 
 def change_version(change):
-    version_row = local("grep '__version__ = ' python_manager/__init__.py", capture=True)
+    version_row = local("grep '__version__ = ' command_manager/__init__.py", capture=True)
     version = version_row.split(' = ')[1].strip()
     version = map(int, version[1:-1].split('.'))
     new_version = '.'.join(map(str, change(*version)))
-    local("sed -i -- 's/__version__ =.*/__version__ = \"{}\"/g' python_manager/__init__.py".format(new_version))
+    local("sed -i -- 's/__version__ =.*/__version__ = \"{}\"/g' command_manager/__init__.py".format(new_version))
     return new_version
 
 
