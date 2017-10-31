@@ -30,7 +30,34 @@ In `manage.py` add the following:
         import logging.config # Optional for logging
         from command_manager import Manager
 
-        logging.config.dictConfig(settings.LOGGING) # Optional for logging
+        LOGGING = { # Optional for logging
+            'version': 1,
+            'disable_existing_loggers': False,
+            'formatters': {
+                'verbose': {
+                    'format': '%(levelname)s | %(asctime)s | %(module)s | %(message)s'
+                }
+            },
+            'handlers': {
+                'commands_handler': {
+                    'level': 'INFO',
+                    'class': 'logging.handlers.RotatingFileHandler',
+                    'formatter': 'verbose',
+                    'filename': os.path.join("logs", 'commands.log'),
+                    'maxBytes': 100000,
+                    'backupCount': 10,
+                }
+            },
+            'loggers': {
+                'commands.my_first_command': {
+                    'handlers': ['commands_handler'],
+                    'level': 'INFO',
+                    'propagate': False
+                }
+            },
+        }
+
+        logging.config.dictConfig(LOGGING) # Optional for logging
         manager = Manager(["commands"])
         manager.run()
 

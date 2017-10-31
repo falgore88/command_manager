@@ -11,7 +11,7 @@ class BaseCommand(object):
 
     def __init__(self):
         self.command_name = self.__class__.__module__.split(".")[-1]
-        self.logger = logging.getLogger(self.command_name)
+        self.logger = logging.getLogger("commands.{}".format(self.command_name))
 
     def add_arguments(self, parser):
         pass
