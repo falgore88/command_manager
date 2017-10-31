@@ -75,7 +75,9 @@ In `my_first_command.py` add the following:
             parser.add_argument("--arg2", help="argument arg2")
     
         def handle(self, *args, **kwargs):
+            self.logger.info("START")
             print "Hello Word: arg1={arg1} arg2={arg2}".format(**kwargs)
+            self.logger.info("END")
 
 > **Warning:**
 > The class must be called the `Command` and inherited from `BaseCommand`
