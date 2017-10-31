@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 __title__ = 'Python Manager'
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 __author__ = 'Evgeniy Titov'
 __license__ = 'BSD 2-Clause'
 
