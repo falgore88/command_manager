@@ -1,4 +1,4 @@
-python_manager
+command_manager
 ===================
 
 
@@ -9,7 +9,7 @@ Installation
 -------------
 Install using `pip`...
 
-    pip install python_manager
+    pip install command_manager
 
 Using
 -------------------
@@ -28,7 +28,7 @@ In `manage.py` add the following:
 
     if __name__ == '__main__':
         import logging.config # Optional for logging
-        from python_manager import Manager
+        from command_manager import Manager
 
         logging.config.dictConfig(settings.LOGGING) # Optional for logging
         manager = Manager(["commands"])
@@ -36,7 +36,7 @@ In `manage.py` add the following:
 
 In `my_first_command.py` add the following:
 
-    from python_manager.commands import BaseCommand
+    from command_manager.commands import BaseCommand
     
     
     class Command(BaseCommand):
