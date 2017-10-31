@@ -80,7 +80,7 @@ In `my_first_command.py` add the following:
 > **Warning:**
 > The class must be called the `Command` and inherited from `BaseCommand`
 
-Now call `manage.py` from the console.
+Now call `manage.py` from the console.             
 ![python manage.py](/asserts/manage.png)
 
 Call our command `my_first_command.py`
