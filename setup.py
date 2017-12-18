@@ -5,6 +5,8 @@ import re
 
 from setuptools import setup
 
+from command_manager.utils import print_console
+
 try:
     from pypandoc import convert
 
@@ -29,7 +31,7 @@ def get_package_data(package):
     for base, filenames in walk:
         filepaths.extend([os.path.join(base, filename)
                           for filename in filenames])
-    print filepaths
+    print_console(filepaths)
     return {package: filepaths}
 
 
@@ -62,6 +64,8 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
         'License :: OSI Approved :: BSD License',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ]

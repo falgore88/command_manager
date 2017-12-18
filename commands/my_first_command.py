@@ -13,4 +13,4 @@ class Command(BaseCommand):
         parser.add_argument("--arg2", help="argument arg2")
 
     def handle(self, *args, **kwargs):
-        print "Hello Word: arg1={arg1} arg2={arg2}".format(**kwargs)
+        print("Hello Word: arg1={arg1} arg2={arg2}".format(**kwargs))

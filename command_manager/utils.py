@@ -54,7 +54,6 @@ def import_string(module_name):
 
 
 def get_files(dir_path, recursive=False, extension=None):
-    files = []
     ext = None
     if extension:
         ext = ".%s" % extension

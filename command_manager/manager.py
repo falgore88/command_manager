@@ -4,9 +4,8 @@ from __future__ import unicode_literals
 import os
 import sys
 
-from exceptions import DuplicateCommandNameException
-from utils import (COLORS, colored_string, get_files, import_string,
-                   print_console)
+from .exceptions import DuplicateCommandNameException
+from .utils import (COLORS, colored_string, get_files, import_string, print_console)
 
 
 class Manager(object):

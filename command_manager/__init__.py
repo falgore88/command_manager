@@ -8,4 +8,4 @@ __license__ = 'BSD 2-Clause'
 
 VERSION = __version__
 
-from manager import Manager
+from .manager import Manager
