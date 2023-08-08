@@ -22,7 +22,7 @@ For example, the package `commands` and the entry point `manager.py`
     │   ├── __init__.py
     │   └── my_first_command.py
     ├── src
-    └── manager.py
+    └── manage.py
 
 In `manage.py` add the following:
 
