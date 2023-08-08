@@ -15,7 +15,7 @@ Using
 -------------------
 Create a Python package anywhere in your application.
 
-For example, the package `commands` and the entry point `manager.py`
+For example, the package `commands` and the entry point `manage.py`
 
     .
     ├── commands
